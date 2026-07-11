@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bjp Muzaffarpur West</title>
     <style>
+        /* 10 सेकंड का बैकग्राउंड और कमल एनीमेशन */
+        @keyframes bgChange {
+            0%, 100% { background: linear-gradient(#8B4000, #FFA500, #FF5F15); }
+            50% { background: linear-gradient(to bottom, #FF9933 50%, #138808 50%); }
+        }
+        @keyframes bloom {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.5); opacity: 0; }
+        }
+
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -12,12 +23,19 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background: linear-gradient(#8B4000, #FFA500 0%, #FF5F15 100%);
+            animation: bgChange 10s infinite;
             color: white;
         }
+
         .container { text-align: center; width: 100%; padding: 20px; }
         
-        /* ऊपर की फोटो का सेक्शन */
+        .lotus {
+            width: 80px; height: 80px;
+            background: radial-gradient(circle, #ff007f 20%, transparent 60%);
+            margin: 10px auto;
+            animation: bloom 10s infinite;
+        }
+
         .header-images {
             display: flex;
             justify-content: space-between;
@@ -27,7 +45,6 @@
         }
         .left-side, .right-side { display: flex; align-items: flex-end; }
         
-        /* फोटो साइजिंग: 1 > 2 > 3 (Left) और 5 > 4 (Right) */
         .img-1 { width: 150px; height: 200px; }
         .img-2 { width: 150px; height: 180px; }
         .img-5 { width: 150px; height: 170px; }
@@ -37,7 +54,7 @@
         
         .leaders-section { display: flex; justify-content: center; align-items: flex-start; gap: 180px; margin-bottom: 30px; }
         .leader { text-align: center; width: 250px; }
-        .leader img { width: 200px; height: 200px; object-fit: cover; }
+        .leader img { width: 200px; height: 200px; object-fit: cover; border: 2px solid white; }
         .leader p { font-weight: bold; margin-top: 10px; line-height: 1.4; }
 
         h1 { font-size: 3em; margin: 20px 0; }
@@ -47,6 +64,9 @@
 <body>
 
     <div class="container">
+        <!-- कमल का फूल -->
+        <div class="lotus"></div>
+
         <!-- ऊपर की तस्वीरें -->
         <div class="header-images">
             <div class="left-side">
