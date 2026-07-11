@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +18,54 @@
             text-align: center;
             color: white;
         }
+        /* लोगो के लिए CSS */
+        .logo {
+            width: 150px; /* आप अपनी आवश्यकता के अनुसार चौड़ाई (width) बदल सकते हैं */
+            height: auto;
+            margin-bottom: 20px;
+        }
         h1 {
             font-size: 3em;
             margin: 0;
         }
         p {
             font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        /* पेज और कम्पोनेंट राउटिंग लिंक्स के लिए CSS */
+        .nav-links {
+            margin-top: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .nav-links a:hover {
+            background: white;
+            color: #8B4000;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- लोगो यहाँ सेट किया गया है -->
+        <img src="public/bjp.png" alt="BJP Logo" class="logo">
+        
         <h1>भारतीय जनता पार्टी मुजफ्फरपुर पश्चिमी में आपका स्वागत है</h1>
         <p>यह भारतीय जनता पार्टी, मुजफ्फरपुर पश्चिमी जिला का आधिकारिक पेज है|</p>
+
+        <!-- Pages और Components फोल्डर की ओर राउट (Route) करने के लिए लिंक्स -->
+        <div class="nav-links">
+            <a href="pages/about.html">हमारे बारे में (Pages)</a>
+            <a href="pages/programs.html">कार्यक्रम (Pages)</a>
+            <a href="components/contact.html">संपर्क (Components)</a>
+        </div>
     </div>
 </body>
 </html>
