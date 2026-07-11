@@ -8,63 +8,60 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background: linear-gradient(#8B4000, #FFA500 0%, #FF5F15 100%);
-        }
-        .container {
-            text-align: center;
             color: white;
         }
-        /* लोगो के लिए CSS */
-        .logo {
-            width: 400px; /* आप अपनी आवश्यकता के अनुसार चौड़ाई (width) बदल सकते हैं */
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 4em;
-            margin: 50px;
-        }
-        p {
-            font-size: 1.2em;
+        .container { text-align: center; }
+        .logo { width: 300px; height: auto; margin-bottom: 20px; }
+        
+        /* नेताओं की फोटो और नाम का सेक्शन */
+        .leaders-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
             margin-bottom: 30px;
         }
-        /* पेज और कम्पोनेंट राउटिंग लिंक्स के लिए CSS */
-        .nav-links {
-            margin-top: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.1em;
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-        .nav-links a:hover {
-            background: white;
-            color: #8B4000;
-        }
+        .leader { text-align: center; width: 250px; }
+        .leader img { width: 200px; height: 200px; object-fit: cover; border-radius: 10px; border: 3px solid white; }
+        .leader p { font-weight: bold; margin-top: 10px; line-height: 1.4; }
+
+        h1 { font-size: 3em; margin: 20px 0; }
+        
+        .nav-links { margin-top: 20px; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 10px; border: 2px solid white; padding: 10px 20px; border-radius: 5px; }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- लोगो यहाँ सेट किया गया है -->
-        <img src="public/bjp.png" alt="BJP Logo" class="logo">
-        
+        <!-- नेताओं की फोटो का सेक्शन -->
+        <div class="leaders-section">
+            <div class="leader">
+                <img src="public/hari mohan.jpg" alt="हरिमोहन चौधरी">
+                <p>हरिमोहन चौधरी<br>जिलाध्यक्ष<br>भाजपा मुजफ्फरपुर पश्चिमी</p>
+            </div>
+            
+            <img src="public/bjp.png" alt="BJP Logo" class="logo">
+            
+            <div class="leader">
+                <img src="public/00 new1-copy.jpg" alt="सम्राट कुमार गुप्ता">
+                <p>सम्राट कुमार गुप्ता<br>जिला महामंत्री सह मुख्यालय प्रभारी<br>भाजपा मुजफ्फरपुर पश्चिमी</p>
+            </div>
+        </div>
+
         <h1>भारतीय जनता पार्टी मुजफ्फरपुर पश्चिमी में आपका स्वागत है</h1>
         <p>यह भारतीय जनता पार्टी, मुजफ्फरपुर पश्चिमी जिला का आधिकारिक पेज है|</p>
 
-        <!-- Pages और Components फोल्डर की ओर राउट (Route) करने के लिए लिंक्स -->
         <div class="nav-links">
             <a href="pages/index.js">Home</a>
             <a href="pages/_app.js">Main</a>
-            <a href="components/contact.html">संपर्क (Components)</a>
+            <a href="components/contact.html">संपर्क</a>
         </div>
     </div>
 </body>
