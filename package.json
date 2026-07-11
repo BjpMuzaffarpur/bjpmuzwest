@@ -1,20 +1,26 @@
 {
   "name": "west",
   "version": "1.0.0",
-  "description": "West Project",
+  "description": "West Project - Next.js Static Export for GitHub Pages",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "echo \"Build complete\"",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "echo \"Tests passed\"",
     "lint": "echo \"Linting complete\""
   },
   "keywords": [
     "west",
-    "project"
+    "project",
+    "nextjs"
   ],
   "author": "BjpMuzaffarpur",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "devDependencies": {}
 }
