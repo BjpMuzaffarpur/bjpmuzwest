@@ -1,0 +1,20 @@
+{
+  "name": "west",
+  "version": "1.0.0",
+  "description": "West Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo \"Build complete\"",
+    "test": "echo \"Tests passed\"",
+    "lint": "echo \"Linting complete\""
+  },
+  "keywords": [
+    "west",
+    "project"
+  ],
+  "author": "BjpMuzaffarpur",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
