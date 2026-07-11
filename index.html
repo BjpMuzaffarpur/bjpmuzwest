@@ -9,46 +9,65 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background: linear-gradient(#8B4000, #FFA500 0%, #FF5F15 100%);
             color: white;
         }
-        .container { text-align: center; }
-        .logo { width: 300px; height: auto; margin-bottom: 20px; }
+        .container { text-align: center; width: 100%; padding: 20px; }
         
-        /* नेताओं की फोटो और नाम का सेक्शन */
-        .leaders-section {
+        /* ऊपर की फोटो का सेक्शन */
+        .header-images {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 180px;
-            margin-bottom: 30px;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            margin-bottom: 20px;
         }
+        .left-side, .right-side { display: flex; align-items: flex-end; gap: 10px; }
+        
+        /* फोटो साइजिंग: 1 > 2 > 3 (Left) और 5 > 4 (Right) */
+        .img-1 { width: 150px; height: 150px; }
+        .img-2 { width: 130px; height: 130px; }
+        .img-3 { width: 110px; height: 110px; }
+        .img-5 { width: 150px; height: 150px; }
+        .img-4 { width: 130px; height: 130px; }
+
+        .logo { width: 300px; height: auto; }
+        
+        .leaders-section { display: flex; justify-content: center; align-items: flex-start; gap: 180px; margin-bottom: 30px; }
         .leader { text-align: center; width: 250px; }
         .leader img { width: 200px; height: 200px; object-fit: cover; }
         .leader p { font-weight: bold; margin-top: 10px; line-height: 1.4; }
 
         h1 { font-size: 3em; margin: 20px 0; }
-        
-        .nav-links { margin-top: 20px; }
         .nav-links a { color: white; text-decoration: none; margin: 0 10px; border: 2px solid white; padding: 10px 20px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- नेताओं की फोटो का सेक्शन -->
+        <!-- ऊपर की तस्वीरें -->
+        <div class="header-images">
+            <div class="left-side">
+                <img src="public/1.jpg" class="img-1" alt="1">
+                <img src="public/2.jpg" class="img-2" alt="2">
+                <img src="public/3.jpg" class="img-3" alt="3">
+            </div>
+            <div class="right-side">
+                <img src="public/4.jpg" class="img-4" alt="4">
+                <img src="public/5.jpg" class="img-5" alt="5">
+            </div>
+        </div>
+
+        <!-- मुख्य लोगो और लीडर्स -->
         <div class="leaders-section">
             <div class="leader">
                 <img src="public/hari mohan.png" alt="हरिमोहन चौधरी">
                 <p>हरिमोहन चौधरी<br>जिलाध्यक्ष<br>भाजपा मुजफ्फरपुर पश्चिमी</p>
             </div>
-            
             <img src="public/bjp.png" alt="BJP Logo" class="logo">
-            
             <div class="leader">
                 <img src="public/00 new1- copy.PNG" alt="सम्राट कुमार गुप्ता">
                 <p>सम्राट कुमार गुप्ता<br>जिला महामंत्री सह मुख्यालय प्रभारी<br>भाजपा मुजफ्फरपुर पश्चिमी</p>
