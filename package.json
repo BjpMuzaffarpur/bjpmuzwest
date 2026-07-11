@@ -1,8 +1,8 @@
 {
-  "name": "west",
+  "name": "bjp muz west",
   "version": "1.0.0",
-  "description": "West Project - Next.js Static Export for GitHub Pages",
-  "main": "index.js",
+  "description": "Bjp Muz West Project - Next.js Static Export for GitHub Pages",
+  "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
