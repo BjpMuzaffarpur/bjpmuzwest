@@ -1,9 +1,10 @@
 export default function Setup() {
-  const mandals = [
-    { id: 1, nameEn: 'Kanti Mandal', nameHi: 'कांटी मंडल', booths: '45+ Booths' },
-    { id: 2, nameEn: 'Marwan Mandal', nameHi: 'मरवन मंडल', booths: '38+ Booths' },
-    { id: 3, nameEn: 'Saraiya Mandal', nameHi: 'सरैया मंडल', booths: '42+ Booths' },
-    { id: 4, nameEn: 'Muzaffarpur West City', nameHi: 'मुजफ्फरपुर पश्चिम नगर', booths: '35+ Booths' },
+  const Assembly = [
+    { id: 1, nameEn: '95 Kanti Assembly', nameHi: '95 कांटी विधानसभा', booths: '396 Booths' },
+    { id: 2, nameEn: '90 Minapur Assembly', nameHi: '90 मीनापुर विधानसभा', booths: '345 Booths' },
+    { id: 3, nameEn: '96 Baruraj Assembly', nameHi: '96 बरुराज विधानसभा', booths: '357 Booths' },
+    { id: 4, nameEn: '97 Paroo Assembly', nameHi: '97 पारू विधानसभा', booths: '388 Booths' },
+    { id: 5, nameEn: '98 Sahebganj Assembly', nameHi: '98 साहेबगंज विधानसभा', booths: '385 Booths' },    
   ];
 
   return (
