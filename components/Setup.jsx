@@ -1,44 +1,45 @@
 export default function Setup() {
+  // हर बॉक्स के लिए अलग-अलग राउंडेड कार्ड स्टाइल और कलर्स
   const Assembly = [
     { 
       id: 1, 
       nameEn: '95 Kanti Assembly', 
       nameHi: '95 कांटी विधानसभा', 
       booths: '396 Booths',
-      badgeColor: '#E0F2FE', // Light Blue
-      accentColor: '#0284C7'  // Sky Blue
+      bgColor: '#EFF6FF',     // Soft Blue
+      accentColor: '#2563EB'   // Bright Blue
     },
     { 
       id: 2, 
       nameEn: '90 Minapur Assembly', 
       nameHi: '90 मीनापुर विधानसभा', 
       booths: '345 Booths',
-      badgeColor: '#DCFCE7', // Light Green
-      accentColor: '#16A34A'  // Emerald
+      bgColor: '#F0FDF4',     // Soft Green
+      accentColor: '#16A34A'   // Bright Green
     },
     { 
       id: 3, 
       nameEn: '96 Baruraj Assembly', 
       nameHi: '96 बरुराज विधानसभा', 
       booths: '357 Booths',
-      badgeColor: '#FEF3C7', // Light Amber
-      accentColor: '#D97706'  // Amber
+      bgColor: '#FFFBEB',     // Soft Amber
+      accentColor: '#D97706'   // Amber Gold
     },
     { 
       id: 4, 
       nameEn: '97 Paroo Assembly', 
       nameHi: '97 पारू विधानसभा', 
       booths: '388 Booths',
-      badgeColor: '#F3E8FF', // Light Purple
-      accentColor: '#9333EA'  // Purple
+      bgColor: '#FAF5FF',     // Soft Purple
+      accentColor: '#9333EA'   // Deep Purple
     },
     { 
       id: 5, 
       nameEn: '98 Sahebganj Assembly', 
       nameHi: '98 साहेबगंज विधानसभा', 
       booths: '385 Booths',
-      badgeColor: '#FFE4E6', // Light Rose
-      accentColor: '#E11D48'  // Rose
+      bgColor: '#FFF1F2',     // Soft Pink/Red
+      accentColor: '#E11D48'   // Rose Red
     },    
   ];
 
@@ -56,26 +57,29 @@ export default function Setup() {
           {Assembly.map((item) => (
             <div 
               key={item.id} 
-              className="setup-card"
+              className="round-setup-card"
               style={{
-                backgroundColor: item.badgeColor,
-                borderTop: `4px solid ${item.accentColor}`,
+                backgroundColor: item.bgColor,
+                borderColor: item.accentColor
               }}
             >
+              {/* गोल आकार का ऊपर वाला टैग */}
               <div 
-                className="setup-badge"
+                className="round-badge"
                 style={{ backgroundColor: item.accentColor, color: '#FFFFFF' }}
               >
                 Assembly
               </div>
 
+              {/* टेक्स्ट सामग्री */}
               <div className="card-content">
                 <h3 data-lang="en" style={{ color: '#0F172A' }}>{item.nameEn}</h3>
                 <h3 data-lang="hi" style={{ color: '#0F172A' }}>{item.nameHi}</h3>
               </div>
 
+              {/* गोल आकार का बूथ काउंट टैग */}
               <span 
-                className="booth-count"
+                className="round-booth-count"
                 style={{
                   backgroundColor: '#FFFFFF',
                   color: item.accentColor,
