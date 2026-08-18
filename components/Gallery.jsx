@@ -7,6 +7,8 @@ const galleryImages = [
   { id: 3, src: 'g3.jpg', titleEn: 'News Paper Clip', titleHi: 'समाचार पत्र क्लिप' },
   { id: 4, src: 'g4.jpg', titleEn: 'District Workshop Inauguration Ceremony', titleHi: 'ज़िला कार्यशाला उद्घाटन समारोह' },
   { id: 5, src: 'g5.jpg', titleEn: 'Jan Sampark Abhiyaan', titleHi: 'जन संपर्क अभियान' },
+  { id: 6, src: 'g6.jpg', titleEn: 'Kalash Vandan Abhiyan', titleHi: 'कलश वंदन अभियान' },
+  { id: 7, src: 'g7.jpg', titleEn: 'Deep Lighting', titleHi: 'दीप प्रज्वलन' },
 ];
 
 export default function Gallery() {
