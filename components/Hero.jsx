@@ -2,8 +2,8 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-media">
-        <video autoPlay muted loop playsInline poster="/assets/hero-poster.jpg">
-          <source src="/assets/hero-bg.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline poster="/public/hero-poster.jpg">
+          <source src="/public/hero-bg.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="container hero-content">
