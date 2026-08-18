@@ -40,9 +40,9 @@ export default function Hero() {
             </a>
           </div>
           <div className="hero-stats">
-            <div className="stat glass"><b>6</b><span data-lang="en">Mandals</span><span data-lang="hi">मंडल</span></div>
-            <div className="stat glass"><b>150+</b><span data-lang="en">Booths</span><span data-lang="hi">बूथ</span></div>
-            <div className="stat glass"><b>10k+</b><span data-lang="en">Karyakartas</span><span data-lang="hi">कार्यकर्ता</span></div>
+            <div className="stat glass"><b>32</b><span data-lang="en">Mandals</span><span data-lang="hi">मंडल</span></div>
+            <div className="stat glass"><b>1871</b><span data-lang="en">Booths</span><span data-lang="hi">बूथ</span></div>
+            <div className="stat glass"><b>50k+</b><span data-lang="en">Karyakartas</span><span data-lang="hi">कार्यकर्ता</span></div>
           </div>
         </div>
       </div>
