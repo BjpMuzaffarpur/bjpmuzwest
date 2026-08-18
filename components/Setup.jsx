@@ -18,9 +18,9 @@ export default function Setup() {
         </h2>
 
         <div className="setup-grid">
-          {mandals.map((Assembly) => (
+          {Assembly.map((Assembly) => (
             <div key={Assembly.id} className="glass setup-card">
-              <div className="setup-badge">Mandal</div>
+              <div className="setup-badge">Assembly</div>
               <h3 data-lang="en">{Assembly.nameEn}</h3>
               <h3 data-lang="hi">{Assembly.nameHi}</h3>
               <span className="booth-count">{Assembly.booths}</span>
