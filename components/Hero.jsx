@@ -1,9 +1,18 @@
 export default function Hero() {
+  // GitHub Pages केBasePath को सही तरीके से हैंडल करने के लिए
+  const basePath = process.env.NODE_ENV === 'production' ? '/bjpmuzwest' : '';
+
   return (
     <section className="hero" id="home">
       <div className="hero-media">
-        <video autoPlay muted loop playsInline poster="/public/hero-poster.jpg">
-          <source src="/public/hero-bg.mp4" type="video/mp4" />
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          poster={`${basePath}/hero-poster.jpg`}
+        >
+          <source src={`${basePath}/hero-bg.mp4`} type="video/mp4" />
         </video>
       </div>
       <div className="container hero-content">
