@@ -22,13 +22,13 @@ export default function Footer() {
           <div className="footer-col">
             <h4 data-lang="en">Contact</h4><h4 data-lang="hi">संपर्क</h4>
             <ul>
-              <li><a href="mailto:info@bjpmuzaffarpurwest.example">info@bjpmuzaffarpurwest.example</a></li>
+              <li><a href="mailto:bjp95kanti@gmail.com">bjp95kanti@gmail.com</a></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span data-lang="en">&copy; 2026 Bharatiya Janata Party. All rights reserved.</span>
-          <span data-lang="hi">&copy; 2026 भारतीय जनता पार्टी। सर्वाधिकार सुरक्षित।</span>
+          <span data-lang="en">&copy; 2026 Bharatiya Janata Party Muzaffarpur West. All rights reserved.</span>
+          <span data-lang="hi">&copy; 2026 भारतीय जनता पार्टी मुजफ्फरपुर पश्चिमी। सर्वाधिकार सुरक्षित।</span>
         </div>
       </div>
 
