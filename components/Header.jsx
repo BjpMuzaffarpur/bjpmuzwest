@@ -30,7 +30,7 @@ export default function Header() {
               <Image 
                 src={`${basePath}/logo.png`} 
                 alt="BJP Logo" 
-                width={80} 
+                width={100} 
                 height={80} 
                 priority 
               />
