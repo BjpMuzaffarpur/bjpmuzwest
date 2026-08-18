@@ -1,6 +1,5 @@
 export default function Hero() {
-  // GitHub Pages केBasePath को सही तरीके से हैंडल करने के लिए
-  const basePath = process.env.NODE_ENV === 'production' ? '/bjpmuzwest' : '';
+  const basePath = '/bjpmuzwest';
 
   return (
     <section className="hero" id="home">
