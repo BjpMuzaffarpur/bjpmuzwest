@@ -14,7 +14,10 @@ export default function HomePage() {
       <Header />
       <Hero />
       <About />
+      <Organization />
+      <Setup />
       <OfficeBearers />
+      <Gallery />
       <News />
       <Footer />
     </main>
