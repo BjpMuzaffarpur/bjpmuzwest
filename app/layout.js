@@ -1,10 +1,5 @@
-import { Baloo_Bhai_2, Hind, Noto_Sans_Devanagari } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
-
-const baloo = Baloo_Bhai_2({ subsets: ['devanagari', 'latin'], weight: ['500', '700', '800'], variable: '--font-display' });
-const hind = Hind({ subsets: ['devanagari', 'latin'], weight: ['400', '500', '600', '700'], variable: '--font-body' });
-const noto = Noto_Sans_Devanagari({ subsets: ['devanagari'], weight: ['400', '500', '600', '700'] });
 
 export const metadata = {
   title: 'Bharatiya Janata Party | Muzaffarpur West District',
@@ -36,7 +31,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${baloo.variable} ${hind.variable} ${noto.className}`}>
+    <html lang="en" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <head>
         <script
           type="application/ld+json"
