@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; // 1. Next Image import करें
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Header() {
@@ -22,7 +23,14 @@ export default function Header() {
         <div className="container header-inner">
           <a href="#home" className="brand" aria-label="Home">
             <span className="brand-emblem">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M12 2C12 2 9 6 9 10c0 1.5.7 2.7 1.6 3.6C9.6 14.2 9 15.4 9 16.8 9 19.1 10.8 21 13 21c1.6 0 3-.9 3.7-2.2.3.1.6.2 1 .2 1.8 0 3.3-1.5 3.3-3.3 0-1.4-.9-2.6-2.1-3.1C19 11.7 19 10.8 19 10c0-4-3-8-3-8s-1 2-1 4c0-2-1-4-3-4z" fill="white"/></svg>
+              {/* SVG हटाकर यहाँ Next Image का प्रयोग किया गया है */}
+              <Image 
+                src="/logo.png" 
+                alt="BJP Logo" 
+                width={36} 
+                height={36} 
+                priority 
+              />
             </span>
             <span className="brand-text">
               <span className="name" data-lang="en">BJP &mdash; Muzaffarpur West</span>
