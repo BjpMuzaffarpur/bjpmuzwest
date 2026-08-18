@@ -64,68 +64,6 @@ ul { list-style: none; }
 .section-pad { padding: 96px 0; }
 .section-alt { background: linear-gradient(180deg, var(--navy-deep) 0%, #0d2340 100%); }
 
-/* Setup Section Grid & Round Card Styles */
-.setup-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* Round Shape Cards */
-.round-setup-card {
-  border-radius: 28px; /* High curvature for pill-box effect */
-  border: 1.5px solid;
-  padding: 1.75rem 1.5rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--glass-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.round-setup-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
-}
-
-/* Pill Shaped Top Badge */
-.round-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.35rem 1.1rem;
-  border-radius: 9999px;
-  margin-bottom: 1rem;
-}
-
-.card-content h3 {
-  font-family: var(--font-display);
-  margin: 0.25rem 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-/* Round Booth Count Pill */
-.round-booth-count {
-  margin-top: 1.25rem;
-  display: inline-block;
-  padding: 0.4rem 1.25rem;
-  border-radius: 9999px;
-  font-size: 0.88rem;
-  font-weight: 700;
-  background-color: rgba(7, 20, 41, 0.65);
-  border: 1.5px solid;
-  backdrop-filter: blur(8px);
-}
-
 /* Glass Cards */
 .glass {
   background: var(--glass-bg);
@@ -144,6 +82,7 @@ ul { list-style: none; }
   box-shadow: var(--glass-shadow);
 }
 
+/* Buttons */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 26px; border-radius: 999px; font-weight: 700;
@@ -246,6 +185,72 @@ nav.main-nav a:hover { color: var(--white); background: rgba(255, 255, 255, 0.08
 .org-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
 .org-card p { color: rgba(255, 255, 255, 0.72); font-size: 0.94rem; }
 
+/* Setup Assembly Section (Rounded Cards) */
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.round-setup-card {
+  border-radius: 28px;
+  border: 1.5px solid;
+  padding: 1.75rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.round-setup-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.round-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.card-content h3 {
+  font-family: var(--font-display);
+  margin: 0.25rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.round-booth-count {
+  margin-top: 1.25rem;
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  background-color: rgba(7, 20, 41, 0.65);
+  border: 1.5px solid;
+  backdrop-filter: blur(8px);
+}
+
+.setup-wrap { display: flex; flex-direction: column; }
+.setup-row { display: flex; align-items: center; gap: 22px; padding: 22px 26px; border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+.setup-row:last-child { border-bottom: none; }
+.setup-row .level { min-width: 170px; font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 1.02rem; }
+.setup-row .desc { color: rgba(255, 255, 255, 0.78); font-size: 0.94rem; }
+
+/* Bearers */
 .bearers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .bearer-card { overflow: hidden; text-align: center; transition: transform .3s ease; }
 .bearer-card:hover { transform: translateY(-6px); }
@@ -254,16 +259,62 @@ nav.main-nav a:hover { color: var(--white); background: rgba(255, 255, 255, 0.08
 .bearer-info h4 { font-size: 1.02rem; margin-bottom: 4px; }
 .bearer-info span { font-size: 0.82rem; color: var(--gold); font-weight: 600; }
 
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; gap: 14px; }
-.gallery-grid .g-item { grid-column: span 1; grid-row: span 1; position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--glass-border); }
-.gallery-grid .g-item.big { grid-column: span 2; grid-row: span 2; }
-.g-item img { transition: transform .5s ease; }
-.g-item:hover img { transform: scale(1.08); }
-.g-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(7,20,41,0.85) 100%); opacity: 0; transition: opacity .3s ease; }
-.g-item:hover::after { opacity: 1; }
-.g-item .g-label { position: absolute; left: 12px; bottom: 12px; right: 12px; font-size: 0.85rem; font-weight: 600; opacity: 0; transform: translateY(6px); transition: all .3s ease; z-index: 2; }
-.g-item:hover .g-label { opacity: 1; transform: translateY(0); }
+/* Gallery Section (Prevent Overlapping Layout) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  width: 100%;
+}
 
+.gallery-frame {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.gallery-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-frame:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  padding: 16px;
+  background: rgba(7, 20, 41, 0.6);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-caption p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* News Section */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .news-card { overflow: hidden; transition: transform .3s ease; }
 .news-card:hover { transform: translateY(-6px); }
@@ -274,11 +325,13 @@ nav.main-nav a:hover { color: var(--white); background: rgba(255, 255, 255, 0.08
 .news-body p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 14px; }
 .news-link { font-size: 0.86rem; font-weight: 700; color: var(--saffron); display: inline-flex; align-items: center; gap: 6px; }
 
+/* Call To Action Band */
 .cta-band { padding: 70px 0; }
 .cta-inner { padding: 48px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
 .cta-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.1rem); }
 .cta-inner p { color: rgba(255, 255, 255, 0.78); max-width: 560px; }
 
+/* Site Footer */
 .site-footer { background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 70px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.1fr; gap: 36px; padding-bottom: 50px; }
 .footer-brand p { color: rgba(255, 255, 255, 0.65); font-size: 0.92rem; max-width: 280px; margin-top: 16px; }
@@ -303,17 +356,18 @@ nav.main-nav a:hover { color: var(--white); background: rgba(255, 255, 255, 0.08
   .bearers-grid { grid-template-columns: repeat(3, 1fr); }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
 @media (max-width: 860px) {
   nav.main-nav { display: none; }
   .hamburger { display: flex; }
 }
+
 @media (max-width: 640px) {
   .section-pad { padding: 64px 0; }
   .org-grid, .news-grid, .footer-grid { grid-template-columns: 1fr; }
   .bearers-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
-  .gallery-grid .g-item.big { grid-column: span 2; grid-row: span 1; }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
   .hero-card { padding: 30px 22px; }
+  .setup-row { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
