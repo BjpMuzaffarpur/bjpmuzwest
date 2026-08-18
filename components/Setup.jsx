@@ -3,7 +3,8 @@ export default function Setup() {
     { 
       id: 1, 
       nameEn: '95 Kanti Assembly', 
-      nameHi: '95 कांटी विधानसभा', 
+      nameHi: '95 कांटी विधानसभा',
+      mandal: '6 Mandal',
       booths: '396 Booths',
       bgColor: 'rgba(255, 122, 26, 0.12)',   // Soft Saffron tint
       accentColor: 'var(--saffron)'
@@ -11,7 +12,8 @@ export default function Setup() {
     { 
       id: 2, 
       nameEn: '90 Minapur Assembly', 
-      nameHi: '90 मीनापुर विधानसभा', 
+      nameHi: '90 मीनापुर विधानसभा',
+      mandal: '6 Mandal',
       booths: '345 Booths',
       bgColor: 'rgba(18, 138, 62, 0.12)',    // Soft Green tint
       accentColor: 'var(--green)'
@@ -19,7 +21,8 @@ export default function Setup() {
     { 
       id: 3, 
       nameEn: '96 Baruraj Assembly', 
-      nameHi: '96 बरुराज विधानसभा', 
+      nameHi: '96 बरुराज विधानसभा',
+      mandal: '7 Mandal',
       booths: '357 Booths',
       bgColor: 'rgba(244, 197, 66, 0.12)',   // Soft Gold tint
       accentColor: 'var(--gold)'
@@ -27,7 +30,8 @@ export default function Setup() {
     { 
       id: 4, 
       nameEn: '97 Paroo Assembly', 
-      nameHi: '97 पारू विधानसभा', 
+      nameHi: '97 पारू विधानसभा',
+      mandal: '6 Mandal',
       booths: '388 Booths',
       bgColor: 'rgba(232, 93, 4, 0.12)',     // Soft Deep Saffron tint
       accentColor: 'var(--saffron-deep)'
@@ -36,6 +40,7 @@ export default function Setup() {
       id: 5, 
       nameEn: '98 Sahebganj Assembly', 
       nameHi: '98 साहेबगंज विधानसभा', 
+      mandal: '7 Mandal',
       booths: '385 Booths',
       bgColor: 'rgba(255, 255, 255, 0.10)',  // Soft White Glass tint
       accentColor: 'var(--white)'
