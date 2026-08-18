@@ -7,7 +7,7 @@ const bearers = [
     nameHi: 'श्री हरिमोहन चौधरी', 
     titleEn: 'District President', 
     titleHi: 'जिला अध्यक्ष',
-    image: '/hari.png' // public/hari.png
+    image: {`${basePath}/hari.png`} // public/hari.png 
   },
   { 
     id: 2, 
@@ -15,7 +15,7 @@ const bearers = [
     nameHi: 'श्री सम्राट कुमार गुप्ता', 
     titleEn: 'District General Secretary', 
     titleHi: 'जिला महामंत्री',
-    image: '/self.png' // public/self.png
+    image: {`${basePath}/self.png`} // public/self.png
   },
 ];
 
