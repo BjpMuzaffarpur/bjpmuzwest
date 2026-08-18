@@ -18,12 +18,12 @@ export default function Setup() {
         </h2>
 
         <div className="setup-grid">
-          {mandals.map((mandal) => (
-            <div key={mandal.id} className="glass setup-card">
+          {mandals.map((Assembly) => (
+            <div key={Assembly.id} className="glass setup-card">
               <div className="setup-badge">Mandal</div>
-              <h3 data-lang="en">{mandal.nameEn}</h3>
-              <h3 data-lang="hi">{mandal.nameHi}</h3>
-              <span className="booth-count">{mandal.booths}</span>
+              <h3 data-lang="en">{Assembly.nameEn}</h3>
+              <h3 data-lang="hi">{Assembly.nameHi}</h3>
+              <span className="booth-count">{Assembly.booths}</span>
             </div>
           ))}
         </div>
