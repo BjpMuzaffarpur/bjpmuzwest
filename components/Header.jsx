@@ -1,13 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image'; // 1. Next Image import करें
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Header() {
   const { lang, toggleLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // GitHub Pages के लिए basePath डिफ़ाइन करें
+  const basePath = '/bjpmuzwest';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,9 +26,9 @@ export default function Header() {
         <div className="container header-inner">
           <a href="#home" className="brand" aria-label="Home">
             <span className="brand-emblem">
-              {/* SVG हटाकर यहाँ Next Image का प्रयोग किया गया है */}
+              {/* basePath का उपयोग करके logo.png लोड करें */}
               <Image 
-                src="/logo.png" 
+                src={`${basePath}/logo.png`} 
                 alt="BJP Logo" 
                 width={36} 
                 height={36} 
