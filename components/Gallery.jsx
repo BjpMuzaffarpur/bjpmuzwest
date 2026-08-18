@@ -29,9 +29,10 @@ export default function Gallery() {
                 <Image
                   src={`${basePath}/gallery/${item.src}`}
                   alt={item.titleEn}
-                  width={400}
-                  height={300}
+                  width={500}
+                  height={350}
                   className="gallery-img"
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
               </div>
               <div className="gallery-caption">
