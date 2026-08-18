@@ -1,5 +1,5 @@
 import './globals.css';
-import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageProvider } from '@/context/LanguageContext.jsx';
 
 export const metadata = {
   title: 'Bharatiya Janata Party | Muzaffarpur West District',
