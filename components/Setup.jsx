@@ -82,6 +82,7 @@ export default function Setup() {
               <div className="card-content">
                 <h3 data-lang="en">{item.nameEn}</h3>
                 <h3 data-lang="hi">{item.nameHi}</h3>
+                <p className="mandal-text">{item.mandal}</p>
               </div>
 
               {/* Booth Count Capsule */}
