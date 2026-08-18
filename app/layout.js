@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
             name: 'Bharatiya Janata Party - Muzaffarpur West District',
             alternateName: 'भारतीय जनता पार्टी, मुजफ्फरपुर पश्चिमी जिला',
             url: 'https://bjpmuzaffarpur.github.io/bjpmuzwest/',
-            logo: 'assets/logo.png',
+            logo: 'public/logo.png',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Muzaffarpur',
