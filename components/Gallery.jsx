@@ -4,7 +4,9 @@ import Image from 'next/image';
 const galleryImages = [
   { id: 1, src: 'g1.jpg', titleEn: 'District Executive Meeting', titleHi: 'जिला कार्यसमिति बैठक' },
   { id: 2, src: 'g2.jpg', titleEn: 'Booth Workers Sammelan', titleHi: 'बूथ कार्यकर्ता सम्मेलन' },
-  { id: 3, src: 'g3.jpg', titleEn: 'Jan Sampark Abhiyaan', titleHi: 'जन संपर्क अभियान' },
+  { id: 3, src: 'g3.jpg', titleEn: 'News Paper Clip', titleHi: 'समाचार पत्र क्लिप' },
+  { id: 4, src: 'g4.jpg', titleEn: 'District Workshop Inauguration Ceremony', titleHi: 'ज़िला कार्यशाला उद्घाटन समारोह' },
+  { id: 5, src: 'g5.jpg', titleEn: 'Jan Sampark Abhiyaan', titleHi: 'जन संपर्क अभियान' },
 ];
 
 export default function Gallery() {
