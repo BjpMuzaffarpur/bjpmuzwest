@@ -3,8 +3,8 @@ import Image from 'next/image';
 const bearers = [
   { 
     id: 1, 
-    nameEn: 'Shri [Hari Mohan Chaudhary]', 
-    nameHi: 'श्री [हरिमोहन चौधरी]', 
+    nameEn: 'Shri Hari Mohan Chaudhary', 
+    nameHi: 'श्री हरिमोहन चौधरी', 
     titleEn: 'District President', 
     titleHi: 'जिला अध्यक्ष',
     image: '/hari.png' // public/hari.png
@@ -12,7 +12,7 @@ const bearers = [
   { 
     id: 2, 
     nameEn: 'Shri [Samrat Kumar Gupta]', 
-    nameHi: 'श्री [सम्राट कुमार गुप्ता]', 
+    nameHi: 'श्री सम्राट कुमार गुप्ता', 
     titleEn: 'District General Secretary', 
     titleHi: 'जिला महामंत्री',
     image: '/self.png' // public/self.png
