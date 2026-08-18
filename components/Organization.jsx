@@ -6,8 +6,10 @@ export default function Organization() {
   const wings = [
     { id: 1, titleEn: 'Youth Wing (Yuva Morcha)', titleHi: 'युवा मोर्चा', descEn: 'Empowering young leaders across all booths.', descHi: 'सभी बूथों पर युवा नेतृत्व का सशक्तिकरण।' },
     { id: 2, titleEn: 'Women Wing (Mahila Morcha)', titleHi: 'महिला मोर्चा', descEn: 'Driving women empowerment and grassroots reach.', descHi: 'महिला सशक्तिकरण एवं ज़मीनी पहुँच को बढ़ावा।' },
-    { id: 3, titleEn: 'Kisan Morcha', titleHi: 'किसान मोर्चा', descEn: 'Working for the welfare of farmers in the district.', descHi: 'जिले के किसानों के कल्याण हेतु कार्यरत।' },
+    { id: 3, titleEn: 'scheduled caste Morcha', titleHi: 'अनुसूचित जाति मोर्चा', descEn: 'Working for the welfare of farmers in the district.', descHi: 'जिले के कअनुसूचित जाति के कल्याण हेतु कार्यरत।' },
     { id: 4, titleEn: 'OBC Morcha', titleHi: 'ओबीसी मोर्चा', descEn: 'Ensuring inclusive development and representation.', descHi: 'समावेशी विकास एवं प्रतिनिधित्व सुनिश्चित करना।' },
+    { id: 5, titleEn: 'Kisan Morcha', titleHi: 'किसान मोर्चा', descEn: 'Working for the welfare of farmers in the district.', descHi: 'जिले के किसानों के कल्याण हेतु कार्यरत।' },
+    { id: 6, titleEn: 'Minority Morcha', titleHi: 'कअल्पसंख्यक मोर्चा', descEn: 'Working for the welfare of farmers in the district.', descHi: 'जिले के कअल्पसंख्यक के कल्याण हेतु कार्यरत।' },
   ];
 
   return (
