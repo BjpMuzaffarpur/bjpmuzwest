@@ -31,7 +31,7 @@ export default function Header() {
                 src={`${basePath}/logo.png`} 
                 alt="BJP Logo" 
                 width={120} 
-                height={80} 
+                height={120} 
                 priority 
               />
             </span>
