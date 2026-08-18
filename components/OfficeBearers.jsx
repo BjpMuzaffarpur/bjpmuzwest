@@ -1,8 +1,22 @@
 import Image from 'next/image';
 
 const bearers = [
-  { id: 1, nameEn: 'Shri [Hari Mohan Chaudhary]', nameHi: 'श्री [हरिमोहन चौधरी]', titleEn: 'District President', titleHi: 'जिला अध्यक्ष', bg: 'E85D04', color: 'fff' },
-  { id: 2, nameEn: 'Shri [Samrat Kumar Gupta]', nameHi: 'श्री [सम्राट कुमार गुप्ता]', titleEn: 'District General Secretary', titleHi: 'जिला महामंत्री', bg: '128A3E', color: 'fff' },
+  { 
+    id: 1, 
+    nameEn: 'Shri [Hari Mohan Chaudhary]', 
+    nameHi: 'श्री [हरिमोहन चौधरी]', 
+    titleEn: 'District President', 
+    titleHi: 'जिला अध्यक्ष',
+    image: '/hari.png' // public/hari.png
+  },
+  { 
+    id: 2, 
+    nameEn: 'Shri [Samrat Kumar Gupta]', 
+    nameHi: 'श्री [सम्राट कुमार गुप्ता]', 
+    titleEn: 'District General Secretary', 
+    titleHi: 'जिला महामंत्री',
+    image: '/self.png' // public/self.png
+  },
 ];
 
 export default function OfficeBearers() {
@@ -18,7 +32,7 @@ export default function OfficeBearers() {
             <div key={bearer.id} className="glass bearer-card">
               <div className="bearer-photo">
                 <Image 
-                  src={`https://ui-avatars.com/api/?name=${encodeURIComponent(bearer.titleEn)}&background=${bearer.bg}&color=${bearer.color}&size=300`} 
+                  src={bearer.image} 
                   alt={bearer.titleEn} 
                   width={300} 
                   height={300} 
