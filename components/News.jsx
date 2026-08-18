@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+// process.env का उपयोग करें ताकि build time पर error न आए
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const newsItems = [
   { 
     id: 1, 
