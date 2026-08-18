@@ -1,10 +1,14 @@
-name: Build
+name: Build and Commit Lockfile
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+# Git में commit और deploy करने के लिए write permissions ज़रूरी हैं
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -15,21 +19,36 @@ jobs:
         node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Commit push करने के लिए सही Token का इस्तेमाल करें
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
+      # 1. package-lock.json बनाएं और node_modules इनस्टॉल करें
+      - name: Install dependencies and generate package-lock.json
         run: npm install
+
+      # 2. अगर package-lock.json नया बना है या अपडेट हुआ है, तो उसे Git में ऑटो-कमिट करें
+      - name: Commit and Push package-lock.json
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add package-lock.json
+          # केवल तभी कमिट करें यदि package-lock.json में बदलाव हुआ हो
+          git diff --staged --quiet || (git commit -m "chore: auto-generate package-lock.json [skip ci]" && git push)
 
       - name: Run build
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && success()
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
