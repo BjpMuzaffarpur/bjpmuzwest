@@ -1,5 +1,4 @@
 import './globals.css';
-import { LanguageProvider } from '@/context/LanguageContext.jsx';
 
 export const metadata = {
   title: 'Bharatiya Janata Party | Muzaffarpur West District',
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );
