@@ -1,10 +1,8 @@
 import Image from 'next/image';
 
 const bearers = [
-  { id: 1, nameEn: 'Shri [Name]', nameHi: 'श्री [नाम]', titleEn: 'District President', titleHi: 'जिला अध्यक्ष', bg: 'E85D04', color: 'fff' },
-  { id: 2, nameEn: 'Shri [Name]', nameHi: 'श्री [नाम]', titleEn: 'General Secretary', titleHi: 'महामंत्री', bg: '128A3E', color: 'fff' },
-  { id: 3, nameEn: 'Smt. [Name]', nameHi: 'श्रीमती [नाम]', titleEn: 'Treasurer', titleHi: 'कोषाध्यक्ष', bg: '0B1E3D', color: 'fff' },
-  { id: 4, nameEn: 'Shri [Name]', nameHi: 'श्री [नाम]', titleEn: 'Media Incharge', titleHi: 'मीडिया प्रभारी', bg: 'F4C542', color: '0B1E3D' },
+  { id: 1, nameEn: 'Shri [Hari Mohan Chaudhary]', nameHi: 'श्री [हरिमोहन चौधरी]', titleEn: 'District President', titleHi: 'जिला अध्यक्ष', bg: 'E85D04', color: 'fff' },
+  { id: 2, nameEn: 'Shri [Samrat Kumar Gupta]', nameHi: 'श्री [सम्राट कुमार गुप्ता]', titleEn: 'District General Secretary', titleHi: 'जिला महामंत्री', bg: '128A3E', color: 'fff' },
 ];
 
 export default function OfficeBearers() {
