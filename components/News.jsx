@@ -40,9 +40,9 @@ const newsItems = [
 ];
 
 export default function News() {
-  // Gallery की तरह basePath यहाँ सेट करें
+  // Gallery की तरह सेम बेस पाथ
   const basePath = '/bjpmuzwest';
-  
+
   return (
     <section className="section-pad section-alt" id="news">
       <div className="container">
@@ -56,9 +56,10 @@ export default function News() {
         <div className="news-grid">
           {newsItems.map((item) => (
             <article key={item.id} className="glass news-card">
-              <div className="news-thumb">
+              {/* पेरेंट DIV में position: relative और height देना जरूरी है */}
+              <div className="news-thumb" style={{ position: 'relative', width: '100%', height: '220px' }}>
                 <Image 
-                  src={item.image} 
+                  src={`${basePath}/gallery/${item.src}`} 
                   alt={item.titleEn} 
                   fill 
                   style={{ objectFit: 'cover' }} 
@@ -70,7 +71,11 @@ export default function News() {
                 <h3 data-lang="hi">{item.titleHi}</h3>
                 
                 <div data-lang="en">
-                  <p>{item.descEn}</p>
+                  {Array.isArray(item.descEn) ? (
+                    item.descEn.map((para, index) => <p key={index}>{para}</p>)
+                  ) : (
+                    <p>{item.descEn}</p>
+                  )}
                 </div>
 
                 <div data-lang="hi" className="news-paragraphs">
