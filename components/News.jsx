@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 const newsItems = [
   { 
     id: 1, 
@@ -19,7 +17,7 @@ const newsItems = [
       'कार्यक्रम में मंसूरपुर मठ के संत सुरेश दास, नरियार मठ के संत प्रेमशंकर शाही, पानापुर मठ के संत विमल दास महाराज तथा शुभंकरपुर मठ के संत केसरी जी सहित अनेक संत-महात्मा उपस्थित रहे। कार्यक्रम का मंच संचालन अभियान के संयोजक सह जिला महामंत्री उपेंद्र पासवान ने किया।'
     ],
     // public/gallery फोल्डर से इमेज का पाथ
-    image: `${basePath}/gallery/g6.jpg`
+    src: 'g6.jpg'
   },
   { 
     id: 2, 
@@ -28,7 +26,7 @@ const newsItems = [
     titleHi: 'सेवा पखवाड़ा प्रारंभ', 
     descEn: 'Health camps launched across six mandals.', 
     descHi: ['छह मंडलों में स्वास्थ्य शिविर शुरू।'], 
-    image: `${basePath}/gallery/g2.jpg` 
+    src: 'g2.jpg' 
   },
   { 
     id: 3, 
@@ -37,11 +35,14 @@ const newsItems = [
     titleHi: 'युवा मोर्चा सम्मेलन', 
     descEn: 'Young karyakartas pledged to strengthen organisation.', 
     descHi: ['युवा कार्यकर्ताओं ने संगठन मजबूत करने का संकल्प लिया।'], 
-    image: `${basePath}/gallery/g1.jpg` 
+    src: 'g1.jpg' 
   }
 ];
 
 export default function News() {
+  // Gallery की तरह basePath यहाँ सेट करें
+  const basePath = '/bjpmuzwest';
+  
   return (
     <section className="section-pad section-alt" id="news">
       <div className="container">
