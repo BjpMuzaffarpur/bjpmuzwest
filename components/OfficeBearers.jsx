@@ -97,7 +97,7 @@ export default function OfficeBearers() {
         
         {categories.map((category) => (
           /* mb-20 की मदद से हर श्रेणी में पर्याप्त दूरी दी गई है */
-          <div key={category.id} className="category-group my-30">
+          <div key={category.id} className="category-group my-80">
             
             {/* श्रेणी के नाम का सेंटर-एलाइंड बॉक्स */}
             <div className="flex justify-center mb-8">
