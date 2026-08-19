@@ -96,11 +96,16 @@ export default function OfficeBearers() {
         </h2>
         
         {categories.map((category) => (
-          <div key={category.id} className="category-group mb-12">
-            <h3 className="category-title text-xl font-bold my-4">
-              <span data-lang="en">{category.titleEn}</span>
-              <span data-lang="hi">{category.titleHi}</span>
-            </h3>
+          /* mb-20 की मदद से हर श्रेणी में पर्याप्त दूरी दी गई है */
+          <div key={category.id} className="category-group mb-20">
+            
+            {/* श्रेणी के नाम का सेंटर-एलाइंड बॉक्स */}
+            <div className="flex justify-center mb-8">
+              <h3 className="category-title text-xl font-bold py-3 px-8 rounded-lg border border-slate-300 bg-white/80 shadow-md text-center max-w-xl">
+                <span data-lang="en" className="block">{category.titleEn}</span>
+                <span data-lang="hi" className="block text-amber-600 mt-1">{category.titleHi}</span>
+              </h3>
+            </div>
             
             <div className="bearers-grid">
               {category.items.map((bearer) => (
