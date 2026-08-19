@@ -6,6 +6,14 @@ export default function OfficeBearers() {
   const bearers = [
     { 
       id: 1, 
+      nameEn: 'Shri Dinakar Pandit', 
+      nameHi: 'श्री दिनकर पंडित', 
+      titleEn: 'District In-Charge', 
+      titleHi: 'जिला प्रभारी',
+      image: `#` 
+    },    
+    { 
+      id: 2, 
       nameEn: 'Shri Hari Mohan Chaudhary', 
       nameHi: 'श्री हरिमोहन चौधरी', 
       titleEn: 'District President', 
@@ -13,13 +21,93 @@ export default function OfficeBearers() {
       image: `${basePath}/hari.png` 
     },
     { 
-      id: 2, 
+      id: 3, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 4, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 5, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 6, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 7, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 8, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 9, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },
+    { 
+      id: 10, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District Vice-President', 
+      titleHi: 'जिला उपाध्यक्ष',
+      image: `#` 
+    },    
+    { 
+      id: 11, 
       nameEn: 'Shri Samrat Kumar Gupta', 
       nameHi: 'श्री सम्राट कुमार गुप्ता', 
       titleEn: 'District General Secretary', 
       titleHi: 'जिला महामंत्री',
       image: `${basePath}/self.png`
     },
+    { 
+      id: 12, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District General Secretary', 
+      titleHi: 'जिला महामंत्री',
+      image: `#` 
+    },    
+    { 
+      id: 13, 
+      nameEn: 'Shri', 
+      nameHi: 'श्री', 
+      titleEn: 'District General Secretary', 
+      titleHi: 'जिला महामंत्री',
+      image: `#` 
+    },     
   ];
 
   return (
