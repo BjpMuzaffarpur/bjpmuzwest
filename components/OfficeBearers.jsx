@@ -15,7 +15,7 @@ export default function OfficeBearers() {
           nameHi: 'श्री दिनकर पंडित', 
           titleEn: 'District In-Charge', 
           titleHi: 'जिला प्रभारी',
-          image: '#' 
+          image: `${basePath}/dinkar.jpg`  
         },    
         { 
           id: 2, 
