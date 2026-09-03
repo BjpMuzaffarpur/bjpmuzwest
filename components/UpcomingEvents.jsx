@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function UpcomingEvents() {
   const upcomingList = [
     {
@@ -11,6 +12,7 @@ export default function UpcomingEvents() {
       statusHi: 'आगामी',
       descEn: 'The "Seva Sankalp Abhiyan" (Service and Resolve Campaign) is being organized from September 17 to October 17 to mark the auspicious occasion of the birthday of the Honorable Prime Minister Shri Narendra Modi and the completion of his successful 25 years as the head of government.',
       descHi: 'माननीय प्रधानमंत्री श्री नरेंद्र मोदी जी के जन्मदिवस तथा सरकार के मुखिया के रूप में उनके सफल 25 वर्ष पूर्ण होने के सुअवसर पर दिनांक 17 सितंबर से 17 अक्टूबर तक "सेवा संकल्प अभियान" का आयोजन किया जा रहा है।'
+      src: 'invition.png' 
     },
     {
       id: 2,
@@ -23,6 +25,7 @@ export default function UpcomingEvents() {
       statusHi: 'आगामी',
       descEn: 'Cleanliness campaign across all booths on Gandhi Jayanti.',
       descHi: 'गांधी जयंती पर सभी बूथों पर स्वच्छता अभियान।'
+      src: 'invition.png' 
     }
   ];
 
