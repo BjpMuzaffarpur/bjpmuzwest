@@ -2,23 +2,23 @@ export default function UpcomingEvents() {
   const upcomingList = [
     {
       id: 1,
-      date: '25 Sep 2026',
-      titleEn: 'Booth Committee Samagham',
-      titleHi: 'बूथ समिति समागम',
-      locationEn: 'Muzaffarpur West City',
-      locationHi: 'मुजफ्फरपुर पश्चिम नगर',
+      date: '05 Sep 2026',
+      titleEn: 'Service Pledge Campaign',
+      titleHi: 'सेवा संकल्प अभियान',
+      locationEn: 'Muzaffarpur West Office',
+      locationHi: 'मुजफ्फरपुर पश्चिम कार्यालय',
       statusEn: 'Upcoming',
       statusHi: 'आगामी',
-      descEn: 'Strategic planning meet for all booth presidents.',
-      descHi: 'सभी बूथ अध्यक्षों के लिए रणनीतिक योजना बैठक।'
+      descEn: 'The "Seva Sankalp Abhiyan" (Service and Resolve Campaign) is being organized from September 17 to October 17 to mark the auspicious occasion of the birthday of the Honorable Prime Minister Shri Narendra Modi and the completion of his successful 25 years as the head of government.',
+      descHi: 'माननीय प्रधानमंत्री श्री नरेंद्र मोदी जी के जन्मदिवस तथा सरकार के मुखिया के रूप में उनके सफल 25 वर्ष पूर्ण होने के सुअवसर पर दिनांक 17 सितंबर से 17 अक्टूबर तक "सेवा संकल्प अभियान" का आयोजन किया जा रहा है।'
     },
     {
       id: 2,
       date: '02 Oct 2026',
       titleEn: 'Swachhata Abhiyan Drive',
       titleHi: 'स्वच्छता अभियान कार्यक्रम',
-      locationEn: 'Saraiya Mandal',
-      locationHi: 'सरैया मंडल',
+      locationEn: 'In the district and all divisions',
+      locationHi: 'जिला एवं सभी मंडल में',
       statusEn: 'Upcoming',
       statusHi: 'आगामी',
       descEn: 'Cleanliness campaign across all booths on Gandhi Jayanti.',
