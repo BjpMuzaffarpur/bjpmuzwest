@@ -3,18 +3,18 @@ import Image from 'next/image';
 export default function OfficeBearers() {
   const basePath = '/bjpmuzwest';
 
-  // 1. शीर्ष नेतृत्व (Top Row - IDs 1, 2, 11, 12)
+  // 1. शीर्ष नेतृत्व (IDs 1, 2 [बाएं] एवं IDs 11, 12 [दाएं])
   const topRowLeft = [
     { id: 1, nameEn: 'Shri Hari Mohan Chaudhary', nameHi: 'श्री हरिमोहन चौधरी', titleEn: 'District President', titleHi: 'जिला अध्यक्ष', image: `${basePath}/hari.png` },
     { id: 2, nameEn: 'Shri Dinakar Pandit', nameHi: 'श्री दिनकर पंडित', titleEn: 'District In-Charge', titleHi: 'जिला प्रभारी', image: `${basePath}/dinkar.jpg` }
   ];
 
   const topRowRight = [
-    { id: 11, nameEn: 'Shri Samrat Kumar Gupta', nameHi: 'श्री सम्राट कुमार गुप्ता', titleEn: 'District General Secretary-cum-HQ In-charge', titleHi: 'जिला महामंत्री सह मुख्यालय प्रभारी', image: `${basePath}/self.png` },
+    { id: 11, nameEn: 'Shri Samrat Kumar Gupta', nameHi: 'श्री सम्राट कुमार गुप्ता', titleEn: 'District General Secretary', titleHi: 'जिला महामंत्री सह मुख्यालय प्रभारी', image: `${basePath}/self.png` },
     { id: 12, nameEn: 'Shri', nameHi: 'श्री', titleEn: 'District General Secretary', titleHi: 'जिला महामंत्री', image: '#' }
   ];
 
-  // 2. मध्य श्रेणी: उपाध्यक्ष (IDs 3-10) एवं मंत्री (IDs 14-21)
+  // 2. मध्य श्रेणी (IDs 3-10 [बाएं] एवं IDs 14-21 [दाएं])
   const vicePresidents = [
     { id: 3, nameEn: 'Shri', nameHi: 'श्री', titleEn: 'District Vice-President', titleHi: 'जिला उपाध्यक्ष', image: '#' },
     { id: 4, nameEn: 'Shri', nameHi: 'श्री', titleEn: 'District Vice-President', titleHi: 'जिला उपाध्यक्ष', image: '#' },
@@ -44,76 +44,63 @@ export default function OfficeBearers() {
     { id: 23, nameEn: 'Shri', nameHi: 'श्री', titleEn: 'Office Secretary', titleHi: 'कार्यालय मंत्री', image: '#' }
   ];
 
-  // कार्ड रेंडरर कंपोनेंट
-  const renderBearerCard = (bearer) => (
-    <div key={bearer.id} className="glass bearer-card flex flex-col items-center text-center p-4 rounded-xl shadow-md bg-white/70">
-      <div className="bearer-photo w-32 h-32 relative mb-3 overflow-hidden rounded-lg">
+  // इमेज और नाम का छोटा एवं सटीक कार्ड (तस्वीर के आकार अनुसार)
+  const renderItem = (bearer) => (
+    <div key={bearer.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '130px' }}>
+      <div style={{ width: '110px', height: '130px', position: 'relative', marginBottom: '6px' }}>
         <Image 
           src={bearer.image} 
           alt={bearer.titleEn} 
-          width={128} 
-          height={128} 
-          className="object-cover w-full h-full"
+          fill 
+          style={{ objectFit: 'contain' }}
         />
       </div>
-      <div className="bearer-info">
-        <h4 className="font-bold text-gray-900" data-lang="en">{bearer.nameEn}</h4>
-        <h4 className="font-bold text-gray-900" data-lang="hi">{bearer.nameHi}</h4>
-        <span className="text-xs text-amber-600 font-semibold block" data-lang="en">{bearer.titleEn}</span>
-        <span className="text-xs text-amber-600 font-semibold block" data-lang="hi">{bearer.titleHi}</span>
-      </div>
+      <h4 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold' }} data-lang="en">{bearer.nameEn}</h4>
+      <h4 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold' }} data-lang="hi">{bearer.nameHi}</h4>
+      <span style={{ fontSize: '11px', color: '#d97706', display: 'block' }} data-lang="en">{bearer.titleEn}</span>
+      <span style={{ fontSize: '11px', color: '#d97706', display: 'block' }} data-lang="hi">{bearer.titleHi}</span>
     </div>
   );
 
   return (
     <section className="section-pad section-alt" id="bearers">
-      <div className="container max-w-7xl mx-auto px-4">
-        <span className="eyebrow block text-center" data-lang="en">Leadership</span>
-        <span className="eyebrow block text-center" data-lang="hi">नेतृत्व</span>
-        <h2 className="section-title text-center mb-12">
+      <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 15px' }}>
+        <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }} data-lang="en">Leadership</span>
+        <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }} data-lang="hi">नेतृत्व</span>
+        <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>
           <span data-lang="en">Office Bearers</span>
           <span data-lang="hi">पदाधिकारी</span>
         </h2>
 
-        {/* 1. टॉप लीडरशिप (ID 1, 2 [बाएं] एवं ID 11, 12 [दाएं]) */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
-          {/* कॉलम 1: बाएं कार्ड्स (ID 1, 2) */}
-          <div className="flex flex-col gap-6">
-            {topRowLeft.map(renderBearerCard)}
+        {/* 1. शीर्ष अनुभाग: बाएं (ID 1,2) और दाएं (ID 11,12) आमने-सामने */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
+          {/* बाईं पंक्ति */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+            {topRowLeft.map(renderItem)}
           </div>
 
-          {/* कॉलम 2 एवं 3: बीच में खाली स्थान */}
-          <div className="hidden lg:block lg:col-span-2"></div>
-
-          {/* कॉलम 4: दाएं कार्ड्स (ID 11, 12) */}
-          <div className="flex flex-col gap-6">
-            {topRowRight.map(renderBearerCard)}
+          {/* दाईं पंक्ति */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+            {topRowRight.map(renderItem)}
           </div>
         </div>
 
-        {/* 2. मुख्य सूची (ID 3-10 [बाएं] एवं ID 14-21 [दाएं]) */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
-          {/* कॉलम 1: उपाध्यक्ष (ID 3-10) */}
-          <div className="flex flex-col gap-6">
-            {vicePresidents.map(renderBearerCard)}
+        {/* 2. मुख्य अनुभाग: उपाध्यक्ष (IDs 3-10) और मंत्री (IDs 14-21) आमने-सामने */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px' }}>
+          {/* बाईं पंक्ति (उपाध्यक्ष) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+            {vicePresidents.map(renderItem)}
           </div>
 
-          {/* कॉलम 2 एवं 3: बीच में खाली स्थान */}
-          <div className="hidden lg:block lg:col-span-2"></div>
-
-          {/* कॉलम 4: मंत्री (ID 14-21) */}
-          <div className="flex flex-col gap-6">
-            {secretaries.map(renderBearerCard)}
+          {/* दाईं पंक्ति (मंत्री) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+            {secretaries.map(renderItem)}
           </div>
         </div>
 
-        {/* 3. बॉटम रो: शेष पदाधिकारी (ID 13, 22, 23) */}
-        <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-slate-200">
-          {bottomOfficials.map((bearer) => (
-            <div key={bearer.id} className="w-full sm:w-64">
-              {renderBearerCard(bearer)}
-            </div>
-          ))}
+        {/* 3. बॉटम रो: शेष पदाधिकारी (IDs 13, 22, 23) एक लाइन में सेंटर */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', paddingTop: '30px', borderTop: '1px solid #e2e8f0' }}>
+          {bottomOfficials.map(renderItem)}
         </div>
 
       </div>
