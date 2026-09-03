@@ -44,10 +44,10 @@ export default function OfficeBearers() {
     { id: 23, nameEn: 'Shri', nameHi: 'श्री', titleEn: 'Office Secretary', titleHi: 'कार्यालय मंत्री', image: '#' }
   ];
 
-  // इमेज और नाम का छोटा एवं सटीक कार्ड (तस्वीर के आकार अनुसार)
+  // डबल साइज रेंडर कंपोनेंट (Width: 260px, Photo: 220px x 260px)
   const renderItem = (bearer) => (
-    <div key={bearer.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '130px' }}>
-      <div style={{ width: '110px', height: '130px', position: 'relative', marginBottom: '6px' }}>
+    <div key={bearer.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '260px' }}>
+      <div style={{ width: '220px', height: '260px', position: 'relative', marginBottom: '12px' }}>
         <Image 
           src={bearer.image} 
           alt={bearer.titleEn} 
@@ -55,51 +55,47 @@ export default function OfficeBearers() {
           style={{ objectFit: 'contain' }}
         />
       </div>
-      <h4 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold' }} data-lang="en">{bearer.nameEn}</h4>
-      <h4 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold' }} data-lang="hi">{bearer.nameHi}</h4>
-      <span style={{ fontSize: '11px', color: '#d97706', display: 'block' }} data-lang="en">{bearer.titleEn}</span>
-      <span style={{ fontSize: '11px', color: '#d97706', display: 'block' }} data-lang="hi">{bearer.titleHi}</span>
+      <h4 style={{ margin: 0, fontSize: '22px', fontWeight: 'bold' }} data-lang="en">{bearer.nameEn}</h4>
+      <h4 style={{ margin: 0, fontSize: '22px', fontWeight: 'bold' }} data-lang="hi">{bearer.nameHi}</h4>
+      <span style={{ fontSize: '18px', color: '#d97706', fontWeight: '600', display: 'block', marginTop: '2px' }} data-lang="en">{bearer.titleEn}</span>
+      <span style={{ fontSize: '18px', color: '#d97706', fontWeight: '600', display: 'block', marginTop: '2px' }} data-lang="hi">{bearer.titleHi}</span>
     </div>
   );
 
   return (
     <section className="section-pad section-alt" id="bearers">
-      <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 15px' }}>
-        <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }} data-lang="en">Leadership</span>
-        <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }} data-lang="hi">नेतृत्व</span>
-        <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>
+      <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+        <span className="eyebrow" style={{ display: 'block', textAlign: 'center', fontSize: '20px' }} data-lang="en">Leadership</span>
+        <span className="eyebrow" style={{ display: 'block', textAlign: 'center', fontSize: '20px' }} data-lang="hi">नेतृत्व</span>
+        <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>
           <span data-lang="en">Office Bearers</span>
           <span data-lang="hi">पदाधिकारी</span>
         </h2>
 
-        {/* 1. शीर्ष अनुभाग: बाएं (ID 1,2) और दाएं (ID 11,12) आमने-सामने */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
-          {/* बाईं पंक्ति */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+        {/* 1. शीर्ष अनुभाग: बाएं (ID 1,2) और दाएं (ID 11,12) */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '50px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
             {topRowLeft.map(renderItem)}
           </div>
 
-          {/* दाईं पंक्ति */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
             {topRowRight.map(renderItem)}
           </div>
         </div>
 
-        {/* 2. मुख्य अनुभाग: उपाध्यक्ष (IDs 3-10) और मंत्री (IDs 14-21) आमने-सामने */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px' }}>
-          {/* बाईं पंक्ति (उपाध्यक्ष) */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+        {/* 2. मुख्य अनुभाग: उपाध्यक्ष (IDs 3-10) और मंत्री (IDs 14-21) */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '60px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
             {vicePresidents.map(renderItem)}
           </div>
 
-          {/* दाईं पंक्ति (मंत्री) */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
             {secretaries.map(renderItem)}
           </div>
         </div>
 
-        {/* 3. बॉटम रो: शेष पदाधिकारी (IDs 13, 22, 23) एक लाइन में सेंटर */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', paddingTop: '30px', borderTop: '1px solid #e2e8f0' }}>
+        {/* 3. बॉटम रो: शेष पदाधिकारी (IDs 13, 22, 23) */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '80px', paddingTop: '50px', borderTop: '2px solid #e2e8f0' }}>
           {bottomOfficials.map(renderItem)}
         </div>
 
