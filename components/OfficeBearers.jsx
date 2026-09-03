@@ -11,20 +11,20 @@ export default function OfficeBearers() {
       items: [
         { 
           id: 1, 
-          nameEn: 'Shri Dinakar Pandit', 
-          nameHi: 'श्री दिनकर पंडित', 
-          titleEn: 'District In-Charge', 
-          titleHi: 'जिला प्रभारी',
-          image: `${basePath}/dinkar.jpg`  
-        },    
-        { 
-          id: 2, 
           nameEn: 'Shri Hari Mohan Chaudhary', 
           nameHi: 'श्री हरिमोहन चौधरी', 
           titleEn: 'District President', 
           titleHi: 'जिला अध्यक्ष',
           image: `${basePath}/hari.png` 
         },
+        { 
+          id: 2, 
+          nameEn: 'Shri Dinakar Pandit', 
+          nameHi: 'श्री दिनकर पंडित', 
+          titleEn: 'District In-Charge', 
+          titleHi: 'जिला प्रभारी',
+          image: `${basePath}/dinkar.jpg`  
+        },    
       ]
     },
     {
