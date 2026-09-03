@@ -2,6 +2,7 @@
 
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext.jsx';
+import WhatsAppFloat from '@/components/WhatsAppFloat.jsx';
 
 export default function RootLayout({ children }) {
   return (
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <WhatsAppFloat />
+        </LanguageProvider>
       </body>
     </html>
   );
