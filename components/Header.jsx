@@ -46,6 +46,7 @@ export default function Header() {
           <nav className="main-nav" aria-label="Primary">
             <a href="#about" data-lang="en">About</a><a href="#about" data-lang="hi">परिचय</a>
             <a href="#organization" data-lang="en">Organization</a><a href="#organization" data-lang="hi">संगठन</a>
+            <a href="#UpcomingEvents" data-lang="en">Upcoming</a><a href="#UpcomingEvents" data-lang="hi">आगामी</a>
             <a href="#setup" data-lang="en">Setup</a><a href="#setup" data-lang="hi">संरचना</a>
             <a href="#bearers" data-lang="en">Office Bearer</a><a href="#bearers" data-lang="hi">पदाधिकारी</a>
             <a href="#gallery" data-lang="en">Gallery</a><a href="#gallery" data-lang="hi">गैलरी</a>
