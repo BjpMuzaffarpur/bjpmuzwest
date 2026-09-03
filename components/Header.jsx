@@ -69,6 +69,10 @@ export default function Header() {
         <a href="#about" onClick={() => setMobileOpen(false)} data-lang="hi">परिचय</a>
         <a href="#organization" onClick={() => setMobileOpen(false)} data-lang="en">Organization</a>
         <a href="#organization" onClick={() => setMobileOpen(false)} data-lang="hi">संगठन</a>
+        <a href="#setup" onClick={() => setMobileOpen(false)} data-lang="en">setup</a>
+        <a href="#setup" onClick={() => setMobileOpen(false)} data-lang="hi">संरचना</a>
+        <a href="#UpcomingEvents" onClick={() => setMobileOpen(false)} data-lang="en">Upcoming</a>
+        <a href="#UpcomingEvents" onClick={() => setMobileOpen(false)} data-lang="hi">आगामी</a>        
         <a href="#bearers" onClick={() => setMobileOpen(false)} data-lang="en">Office Bearer</a>
         <a href="#bearers" onClick={() => setMobileOpen(false)} data-lang="hi">पदाधिकारी</a>
         <a href="#news" onClick={() => setMobileOpen(false)} data-lang="en">News</a>
