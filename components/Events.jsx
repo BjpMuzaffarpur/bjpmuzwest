@@ -2,21 +2,21 @@ export default function Events() {
   const eventsList = [
     {
       id: 1,
-      date: '15 Aug 2025',
-      titleEn: 'Independence Day Jan Samvad',
-      titleHi: 'स्वतंत्रता दिवस जन संवाद',
-      locationEn: 'Kanti Mandal',
-      locationHi: 'कांटी मंडल',
-      descEn: 'Public gathering and flag hoisting ceremony with local party members.',
-      descHi: 'स्थानीय पार्टी कार्यकर्ताओं के साथ जनसभा एवं ध्वजारोहण कार्यक्रम।'
+      date: '14 Aug 2025',
+      titleEn: 'Partition Horrors Remembrance Day',
+      titleHi: 'स्विभाजन की विभीषिका दिवस',
+      locationEn: 'Muzaffarpur West Office',
+      locationHi: 'पश्चिमी जिला कार्यालय',
+      descEn: 'Gathering information about the tragedy from senior and knowledgeable party and district members on Partition Horrors Remembrance Day.',
+      descHi: 'विभाजन विभीषिका स्मृति दिवस पर पार्टी और ज़िले के वरिष्ठ व जानकार सदस्यों से इस त्रासदी के बारे में जानकारी जुटाना।'
     },
     {
       id: 2,
       date: '21 Jun 2025',
       titleEn: 'International Yoga Day Drive',
       titleHi: 'अंतर्राष्ट्रीय योग दिवस अभियान',
-      locationEn: 'Marwan Mandal',
-      locationHi: 'मरवन मंडल',
+      locationEn: 'Muzaffarpur West Office',
+      locationHi: 'पश्चिमी जिला कार्यालय',
       descEn: 'Community yoga program to promote health and wellness.',
       descHi: 'स्वास्थ्य और कल्याण को बढ़ावा देने के लिए सामुदायिक योग कार्यक्रम।'
     }
