@@ -3,6 +3,8 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Organization from '@/components/Organization';
 import Setup from '@/components/Setup';
+import Upcoming from '@/components/UpcomingEvents';
+import Events from '@/components/Events';
 import Gallery from '@/components/Gallery';
 import OfficeBearers from '@/components/OfficeBearers';
 import News from '@/components/News';
@@ -16,6 +18,8 @@ export default function HomePage() {
       <About />
       <Organization />
       <Setup />
+      <Upcoming />
+      <Events />
       <OfficeBearers />
       <Gallery />
       <News />
