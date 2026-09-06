@@ -38,7 +38,7 @@ export default function Hero() {
               <span data-lang="en">Latest News</span>
               <span data-lang="hi">ताज़ा समाचार</span>
             </a>
-            <a href="https://membership.bjp.org/en/home/login" className="btn btn-ghost">
+            <a href="https://membership.bjp.org/en/home/login" className="btn btn-primary">
               <span data-lang="en">Join BJP Membership</span>
               <span data-lang="hi">भाजपा की सदस्यता ले</span>
             </a>
