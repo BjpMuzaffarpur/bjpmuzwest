@@ -38,6 +38,10 @@ export default function Hero() {
               <span data-lang="en">Latest News</span>
               <span data-lang="hi">ताज़ा समाचार</span>
             </a>
+            <a href="https://membership.bjp.org/en/home/login" className="btn btn-ghost">
+              <span data-lang="en">Join BJP Membership</span>
+              <span data-lang="hi">भाजपा की सदस्यता ले</span>
+            </a>
           </div>
           <div className="hero-stats">
             <div className="stat glass"><b>32</b><span data-lang="en">Mandals</span><span data-lang="hi">मंडल</span></div>
